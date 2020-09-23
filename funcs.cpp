@@ -2,6 +2,9 @@
 
 #include "funcs.h"
 
+//This includes Task A, B, C, G
+
+//Task A
 std::string box (int width, int height) {
   
   std::string result = "Box with a width of "+ std::to_string(width)+ " and a height of " + std::to_string(height) + ":\n";
@@ -15,6 +18,7 @@ std::string box (int width, int height) {
   return result;
 }
 
+//Task B
 std::string checkerboard (int width, int height) {
   
   std::string result = "Checkerboard with a width of "+std::to_string(width)+" and a height of "+std::to_string(height)+":\n";
@@ -36,6 +40,7 @@ std::string checkerboard (int width, int height) {
   return result; 
 }
 
+//Task C
 std::string cross (int size) {
   
   std::string result = "Cross with a size of "+std::to_string(size)+ ":\n";
@@ -72,7 +77,14 @@ std::string cross (int size) {
       }
       result += "*"; //right side *
     }
-    result += "\n\n"; //skips line
+    if (i!= size-1) {
+      result += "\n\n"; //skips line
+    }
+    else {
+      result += "\n";
+    }
   }
   return result;
 }
+
+

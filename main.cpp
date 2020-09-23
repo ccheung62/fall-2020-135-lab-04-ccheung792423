@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "funcs.h"
+#include "shapes.h"
 
 int main () {
   //Task A
