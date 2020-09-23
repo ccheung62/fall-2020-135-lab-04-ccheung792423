@@ -23,15 +23,23 @@ std::string checkerboard (int width, int height) {
   
   std::string result = "Checkerboard with a width of "+std::to_string(width)+" and a height of "+std::to_string(height)+":\n";
   
-  bool star = true;
+  bool star = true; //keep track when to space or *
   for (int i=0; i<height; i++){
     for (int j=0; j<width; j++) {
       if (star){
 	result += "*";
-	star = false;
+	star = false; //star alternates every iternation
       }
       else {
 	result += " ";
+	star = true;
+      }
+    }
+    if (width%2==0){
+      if (star){
+	star = false;
+      }
+      else {
 	star = true;
       }
     }
@@ -44,6 +52,7 @@ std::string checkerboard (int width, int height) {
 std::string cross (int size) {
   
   std::string result = "Cross with a size of "+std::to_string(size)+ ":\n";
+  
   for (int i=0; i<size; i++){ 
     if (i<(size/2)-1){  //first half of the cross
       for (int j=0; j<i; j++) { //stores the spaces according to i
@@ -77,14 +86,43 @@ std::string cross (int size) {
       }
       result += "*"; //right side *
     }
-    if (i!= size-1) {
-      result += "\n\n"; //skips line
-    }
-    else {
-      result += "\n";
-    }
+    result += "\n"; //skip line
   }
   return result;
 }
 
+//Task G
+std::string checker3x3 (int width, int height) {
+  
+  std::string result = "Checkerboard of 3x3 squares with a width of "+std::to_string(width)+" and a height of "+std::to_string(height)+":\n";
 
+  bool star = true; //keep track when to space or *
+  for (int i=0; i<height; i++){
+    for (int j=0; j<width; j++){
+      if (star) { //add the star if the boolean said so
+	result += "*";
+      }
+      else {
+	result += " ";
+      }
+      if(j%3==2){ //only change to false to add spaces after every three *
+	if (star) {
+	  star = false;
+	}
+	else {
+	  star = true;
+	}
+      }
+    }
+    if (i%3!=2){  //revert the boolean back to create the same pattern for every three lines
+      if (star) {
+	star = false;
+      }
+      else {
+	star = true;
+      }
+    }
+    result += "\n";
+  }
+  return result; 
+}

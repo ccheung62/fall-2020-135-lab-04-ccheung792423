@@ -1,5 +1,5 @@
 main: main.o funcs.o shapes.o
-	g++ -o main main.o funcs.o
+	g++ -o main main.o funcs.o shapes.o
 
 funcs.o: funcs.cpp funcs.h
 	g++ -c funcs.cpp
