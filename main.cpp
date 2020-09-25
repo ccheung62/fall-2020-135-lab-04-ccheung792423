@@ -7,12 +7,13 @@
 //shapes.cpp -> Task D, E, F
 
 int main () {
+  
   //Task A
-  std::cout << box(7,4);
+  std::cout << box(-7,4);
   std::cout << "------------------\n";
   std::cout << box(10,10);
   std::cout << "------------------\n";
-  std::cout << box(5,7);
+  std::cout << box(5,-7);
   std::cout << "------------------\n";
   std::cout << box(2,10);
   std::cout << "------------------\n";
@@ -25,7 +26,7 @@ int main () {
   std::cout << "------------------\n";
   std::cout << checkerboard(11,6);
   std::cout << "------------------\n";
-  std::cout << checkerboard(12,3);
+  std::cout << checkerboard(-12,3);
   std::cout << "------------------\n";
   std::cout << checkerboard(2,13);
   std::cout << "------------------\n";
@@ -34,7 +35,7 @@ int main () {
   std::cout << "------------------\n";
   std::cout << cross(5);
   std::cout << "------------------\n";
-  std::cout << cross(14);
+  std::cout << cross(-14);
   std::cout << "------------------\n";
   std::cout << cross(17);
   std::cout << "------------------\n";
@@ -43,22 +44,22 @@ int main () {
   //Task D
   std::cout << lower(1);
   std::cout << "------------------\n";
-  std::cout << lower(3);
+  std::cout << lower(-3);
   std::cout << "------------------\n";
   std::cout << lower(10);
   std::cout << "------------------\n";
-  std::cout << lower(14);
+  std::cout << lower(-14);
   std::cout << "------------------\n";
   std::cout << lower(5);
   std::cout << "------------------\n";
   //Task E
   std::cout << upper(-1);
   std::cout << "------------------\n";
-  std::cout << upper(3.0);
+  std::cout << upper(3);
   std::cout << "------------------\n";
   std::cout << upper(10);
   std::cout << "------------------\n";
-  std::cout << upper(8);
+  std::cout << upper(0);
   std::cout << "------------------\n";
   std::cout << upper(4);
   std::cout << "------------------\n";
@@ -69,8 +70,21 @@ int main () {
   std::cout << "------------------\n";
   std::cout << trapezoid(12,6);
   std::cout << "------------------\n";
+  std::cout << trapezoid(1,6);
+  std::cout << "------------------\n";
+  std::cout << trapezoid(-5,6);
+  std::cout << "------------------\n";
   //Task G
   std::cout << checker3x3(16,11);
   std::cout << "------------------\n";
+  std::cout << checker3x3(2,2);
+  std::cout << "------------------\n";
+  std::cout << checker3x3(-2,11);
+  std::cout << "------------------\n";
+  std::cout << checker3x3(2,3);
+  std::cout << "------------------\n";
+  std::cout << checker3x3(4,9);
+  std::cout << "------------------\n";
+ 
   return 0;
 }

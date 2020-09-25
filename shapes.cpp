@@ -9,6 +9,10 @@ std::string lower (int length) {
   
   std::string result = "Bottom-left half of a square of length "+ std::to_string(length) + ":\n";
 
+  if(length<0) {
+    return result += "Impossible shape! (negative measurement)\n";
+  }
+
   for (int i=1; i<=length; i++) {
     for (int j=0; j<i; j++){ //increase * as height increase
       result += "*";
@@ -22,6 +26,10 @@ std::string lower (int length) {
 std::string upper (int length) {
   std::string result = "Top-right half of a square of length "+ std::to_string(length) + ":\n";
 
+  if(length<0) {
+    return result += "Impossible shape! (negative measurement)\n";
+  }
+
   for (int i=length; i>=1; i--) {
     for (int j=0; j<i; j++){  //decrease * as height decrease 
       result += "*";
@@ -34,10 +42,16 @@ std::string upper (int length) {
 //Task F
 std::string trapezoid (int width, int height) {
   std::string result;
-  if (height > (width/2)){
-    return result = "Impossible shape!\n";
-  }
   result = "Trapezoid with a width of "+std::to_string(width)+ " and a height of "+ std::to_string(height)+":\n";
+
+  if(width<0 || height<0) {
+    return result += "Impossible shape! (negative measurement)\n";
+  }
+
+  if (height > (width/2)){  //check if it could be a trapezoid 
+    return result += "Impossible shape! (height is too high)\n";
+  }
+
   int star = width; //keep track of how many * for each line
   int space = 0; //keep track of how many space for each line
   for(int i=0; i<height; i++){
