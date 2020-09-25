@@ -7,11 +7,8 @@
 //Task D
 std::string lower (int length) {
   
-  std::string result = "Bottom-left half of a square of length "+ std::to_string(length) + ":\n";
-
-  if(length<0) {
-    return result += "Impossible shape! (negative measurement)\n";
-  }
+  //std::string result = "Bottom-left half of a square of length "+ std::to_string(length) + ":\n";
+  std::string result;
 
   for (int i=1; i<=length; i++) {
     for (int j=0; j<i; j++){ //increase * as height increase
@@ -24,11 +21,9 @@ std::string lower (int length) {
 
 //Task E
 std::string upper (int length) {
-  std::string result = "Top-right half of a square of length "+ std::to_string(length) + ":\n";
-
-  if(length<0) {
-    return result += "Impossible shape! (negative measurement)\n";
-  }
+  
+  //std::string result = "Top-right half of a square of length "+ std::to_string(length) + ":\n";
+  std::string result;
 
   for (int i=length; i>=1; i--) {
     for (int j=0; j<i; j++){  //decrease * as height decrease 
@@ -42,11 +37,7 @@ std::string upper (int length) {
 //Task F
 std::string trapezoid (int width, int height) {
   std::string result;
-  result = "Trapezoid with a width of "+std::to_string(width)+ " and a height of "+ std::to_string(height)+":\n";
-
-  if(width<0 || height<0) {
-    return result += "Impossible shape! (negative measurement)\n";
-  }
+  //result = "Trapezoid with a width of "+std::to_string(width)+ " and a height of "+ std::to_string(height)+":\n";
 
   if (height > (width/2)){  //check if it could be a trapezoid 
     return result += "Impossible shape! (height is too high)\n";

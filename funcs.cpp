@@ -7,11 +7,8 @@
 //Task A
 std::string box (int width, int height) {
   
-  std::string result = "Box with a width of "+ std::to_string(width)+ " and a height of " + std::to_string(height) + ":\n";
-
-  if(width<0 || height<0) {
-    return result += "Impossible (negative measurement)\n";
-  }
+  //std::string result = "Box with a width of "+ std::to_string(width)+ " and a height of " + std::to_string(height) + ":\n";
+  std::string result;
 
   for (int i=0; i<height; i++){
     for (int j=0; j<width; j++){
@@ -25,11 +22,8 @@ std::string box (int width, int height) {
 //Task B
 std::string checkerboard (int width, int height) {
   
-  std::string result = "Checkerboard with a width of "+std::to_string(width)+" and a height of "+std::to_string(height)+":\n";
-
-  if(width<0 || height<0) {
-    return result += "Impossible (negative measurement)\n";
-  }
+  //std::string result = "Checkerboard with a width of "+std::to_string(width)+" and a height of "+std::to_string(height)+":\n";
+  std::string result;
   
   bool star = true; //keep track when to space or *
   for (int i=0; i<height; i++){
@@ -59,11 +53,8 @@ std::string checkerboard (int width, int height) {
 //Task C
 std::string cross (int size) {
   
-  std::string result = "Cross with a size of "+std::to_string(size)+ ":\n";
-
-  if(size<0) {
-    return result += "Impossible (negative measurement)\n";
-  }
+  //std::string result = "Cross with a size of "+std::to_string(size)+ ":\n";
+  std::string result;
   
   for (int i=0; i<size; i++){ 
     if (i<(size/2)-1){  //first half of the cross
@@ -106,11 +97,8 @@ std::string cross (int size) {
 //Task G
 std::string checker3x3 (int width, int height) {
   
-  std::string result = "Checkerboard of 3x3 squares with a width of "+std::to_string(width)+" and a height of "+std::to_string(height)+":\n";
-
-  if(width<0 || height<0) {
-    return result += "Impossible (negative measurement)\n";
-  }
+  //std::string result = "Checkerboard of 3x3 squares with a width of "+std::to_string(width)+" and a height of "+std::to_string(height)+":\n";
+  std::string result;
 
   bool star = true; //keep track when to space or *
   for (int i=0; i<height; i++){
