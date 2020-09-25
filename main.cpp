@@ -24,6 +24,7 @@ int main () {
   std::cout << "Box with a width of 10 and a height of 1:\n";
   std::cout << box(10,1);
   std::cout << "------------------\n";
+  
   //Task B
   std::cout << "Checkerboard with a width of 2 and a height of 2:\n";
   std::cout << checkerboard(2,2);
@@ -40,6 +41,7 @@ int main () {
   std::cout << "Checkerboard with a width of 2 and a height of 13:\n";
   std::cout << checkerboard(2,13);
   std::cout << "------------------\n";
+  
   //Task C
   std::cout << "Cross with a size of 8:\n";
   std::cout << cross(8);
@@ -56,6 +58,7 @@ int main () {
   std::cout << "Cross with a size of 2:\n";
   std::cout << cross(2);
   std::cout << "------------------\n";
+  
   //Task D
   std::cout << "Bottom-left half of a square of length 0:\n";
   std::cout << lower(0);
@@ -72,6 +75,7 @@ int main () {
   std::cout << "Bottom-left half of a square of length 5:\n";
   std::cout << lower(5);
   std::cout << "------------------\n";
+  
   //Task E
   std::cout << "Top-right half of a square of length 1:\n";
   std::cout << upper(1);
@@ -88,6 +92,7 @@ int main () {
   std::cout << "Top-right half of a square of length 4:\n";
   std::cout << upper(4);
   std::cout << "------------------\n";
+  
   //Task F
   std::cout << "Trapezoid with a width of 2 and a height of 1:\n";
   std::cout << trapezoid(2,1);
@@ -104,6 +109,7 @@ int main () {
   std::cout << "Trapezoid with a width of 0 and a height of 6:\n";
   std::cout << trapezoid(0,6);
   std::cout << "------------------\n";
+  
   //Task G
   std::cout << "Checkerboard of 3x3 squares with a width of 16 and a height of 11:\n";
   std::cout << checker3x3(16,11);
